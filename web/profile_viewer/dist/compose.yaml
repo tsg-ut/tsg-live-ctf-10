@@ -1,0 +1,11 @@
+services:
+  app:
+    image: node:18-alpine
+    init: true
+    working_dir: /app
+    ports:
+      - 3456:3456
+    volumes:
+      - ./:/app
+    command: sh -c "npm install && node server.js"
+    restart: always

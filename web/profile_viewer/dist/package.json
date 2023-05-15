@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "profile_viewer",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}

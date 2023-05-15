@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0">
+</head>
+<body>
+    <h1>Profile Viewer</h1>
+    <p>Who are you?</p>
+    <form>
+        <label>Enter your codename: <input type="text" placeholder="alice, bob, carol, etc."></label>
+        <footer>
+            <button type="submit">Check your profile</button>
+        </footer>
+    </form>
+    <p id="error"></p>
+    <p>Your profile: <span id="res"></span></p>
+    <script type="module">
+        async function update() {
+            document.querySelector('#res').textContent = await (await fetch('/profile')).text()
+        }
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault()
+            const body = { name: document.querySelector('input').value ?? '' }
+            const response = await fetch('/profile', {
+                method: 'post',
+                body: new URLSearchParams(body).toString(),
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+            document.querySelector('#error').textContent = await response.text()
+            await update()
+        })
+        update()
+    </script>
+</body>
+</html>
