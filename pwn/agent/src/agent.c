@@ -3,22 +3,6 @@
 #include <string.h>
 #include <unistd.h>
 
-char tmp[1];
-int j;
-
-#define readline_n(buf, n)          \
-{                                   \
-    for(j=0; j<n; j++)              \
-    {                               \
-        read(STDIN_FILENO, tmp, 1); \
-        if (tmp[0] == '\n')         \
-        {                           \
-            break;                  \
-        }                           \
-        buf[j] = tmp[0];            \
-    }                               \
-}                                   \
-
 struct Profile
 {
     char name[0x10];
@@ -26,6 +10,21 @@ struct Profile
     long age;
     char job[0x10];
 };
+
+void readline_n(char* buf, int n)
+{
+    char tmp[1];
+    for(int i=0; i<n; i++)
+    {
+        read(STDIN_FILENO, tmp, 1);
+        if (tmp[0] == '\n')
+        {
+            break;
+        }
+        buf[i] = tmp[0];
+    }
+    return;
+}
 
 void win()
 {

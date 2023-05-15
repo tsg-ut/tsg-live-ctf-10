@@ -1,7 +1,7 @@
 # random pair
 
 ## author
-JP3BGY
+JP3BGY,Naan
 
 ## description
 

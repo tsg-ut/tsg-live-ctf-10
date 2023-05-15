@@ -1,6 +1,7 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY --chown=node:node dist/ /app/
+RUN chown -R node:node /app
 USER node
 
 RUN npm ci --only=production && rm -rf ~/.npm

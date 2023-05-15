@@ -40,7 +40,7 @@ tempdist=`mktemp -d`
 echo "Temporary dist: $tempdist"
 cp $distdir $tempdist/$title -r --dereference
 
-cd $tempdist && tar caf $title.tar.gz --sort=name --owner=root:0 --group=root:0 --mtime='2023-05-13T12:00:00Z' --dereference $title && cd -
+cd $tempdist && tar caf $title.tar.gz --sort=name --owner=root:0 --group=root:0 --mtime='2023-05-13T00:00:00Z' --dereference $title && cd -
 mkdir -p $dirname/dist
 cp -f $tempdist/$title.tar.gz $dirname/dist
 

@@ -10,7 +10,7 @@ fabon
 
 ## estimated difficulty
 
-easy-med
+med
 
 ## flag
 
