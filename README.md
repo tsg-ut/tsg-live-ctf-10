@@ -3,7 +3,19 @@
 
 [生放送のアーカイブはこちら](https://www.youtube.com/watch?v=RvMF4u1Ifgc)
 
-##
+## Challenges List
+
+**Name**|**Genre**|**Point**|**Author**|**Solves**
+:------|:------|:------|:------|:------
+[size limit](crypto/size_limit)|crypto|100|JP3BGY|15
+[flag in prime](crypto/flag_in_prime)|crypto|150|JP3BGY|10
+[random-pair](crypto/random-pair)|crypto|150|JP3BGY,Naan|9
+[random-duo](crypto/random-duo)|crypto|200|JP3BGY|10
+[agent](pwn/agent)|pwn|100|iwashiira|4
+[renewal](pwn/renewal)|pwn|300|iwashiira|3
+[true_version](pwn/true_version)|pwn|500|iwashiira|1
+[string_related](rev/string_related)|rev|150|iwashiira|9
+[profile viewer](web/profile_viewer)|web|400|fabon|9
 
 ## Scoreboard
 
