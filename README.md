@@ -1,4 +1,11 @@
 # tsg-live-ctf-10
+11月19日に行われたプログラミング生放送「TSG LIVE! 10」の中で行われた、競技時間100分間のCTFです。
+
+[生放送のアーカイブはこちら](https://www.youtube.com/watch?v=RvMF4u1Ifgc)
+
+##
+
+## Scoreboard
 
 |#  |Name|Point|
 |---|----|-----|
